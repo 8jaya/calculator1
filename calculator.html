@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Calculator</title>
+    <style>
+        
+        table{
+            background-color: rgb(73, 69, 69);
+            padding:15px 40px 15px 40px;
+            width: 400px;
+            height: 400px;
+            
+        }
+        input[type="button"]{
+            border-radius: 10%;
+            height:80px;
+            width: 150px; 
+            font-size: x-large;
+            background-color: rgb(12, 236, 236);
+        }
+        input[type="text"]
+        {
+            
+            border: solid pink 4px;
+            height: 70px;
+            font-size: x-large;
+        }
+    </style>
+
+ 
+</head>
+<body>
+    <h1>CALCULTOR</h1>
+    <script src="calculator.js"></script>
+    <div class="container">
+    <table class="center">
+        <tr>
+           <td colspan="2"> <input type="text" id="result" value=''> </td>
+            <td><input type="button" value="C" onclick=" document.getElementById('result').value = ''"></td>
+            <td><input type="button" value="(" onclick="add(`(`)"></td>
+            <td><input type="button" value=")" onclick="add(`)`)"></td>
+            <td><input type="button" value="Modulo" onclick="add(`%`)"></td>
+        </tr>
+        <tr>    
+            <td><input type="button" value="7" onclick="add(7)"></td>
+            <td><input type="button" value="8" onclick="add(8)"></td>
+            <td><input type="button" value="9" onclick="add(9)"></td>
+            <td><input type="button" value="+" onclick="add(`+`)"></td>
+            <td><input type="button" value="sin" onclick="sinf()" ></td>
+            <td><input type="button" value="sqrt" onclick="squareroot()"></td>
+        </tr>
+        <tr>    
+            <td><input type="button" value="4" onclick="add(4)"></td>
+            <td><input type="button" value="5" onclick="add(5)"></td>
+            <td><input type="button" value="6" onclick="add(6)"></td>
+            <td><input type="button" value="-" onclick="add('-')"></td>
+            <td><input type="button" value="cos" onclick="cosf()"></td>
+            <td><input type="button" value="log" onclick="logarithm()"></td>
+        </tr>
+        <tr>    
+            <td><input type="button" value="1" onclick="add(1)"></td>
+            <td><input type="button" value="2" onclick="add(2)"></td>
+            <td><input type="button" value="3" onclick="add(3)"></td>
+            <td><input type="button" value="/" onclick="add('/')"></td>
+            <td><input type="button" value="tan" onclick="tangent()"></td>
+            <td><input type="button" value="x!" onclick="factorial()"></td>
+        </tr>
+        <tr>    
+            <td><input type="button" value="0" onclick="add('0')"></td>
+            <td><input type="button" value="." onclick="add('.')"></td>
+            <td><input type="button" value="=" onclick="solve()"></td>
+            <td><input type="button" value="*" onclick="add('*')"></td>
+            <td><input type="button" value="exp" onclick="expo()"></td>
+            <td><input type="button" value="Pi" onclick=" document.getElementById('result').value = Math.PI"></td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>
